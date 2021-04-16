@@ -1,4 +1,7 @@
 import csv
+import collections
+
+c = collections.Counter
 
 archivo = open("/home/alumno/Descargas/netflix_titles.csv","r")
 archivo_nuevo = open("/home/alumno/Descargas/peliculas_2020.csv","w")
@@ -16,30 +19,20 @@ for elem in pelis_2020:
     writer.writerow(elem)
 
 archivo.seek(0)
-
+next(csvreader)
 paises = []
 for elem in csvreader:
     paises.append(elem[5])
-cant = []
-for pais in paises:
-    cant.append(paises.count(pais))
+paises = list(filter(lambda x:x != '',paises))
+paises = collections.Counter(paises)
 
-cantidades = list(zip(paises,cant))
+print('-'*40)
+print(f'{"Pais":<20}{"Producciones":>20}')
+print('-'*40)
 
-def segundo(elem):
-    return elem[1]
-cantidades.sort(key=segundo,reverse=True)
-sin_repetir = []
+for elem in paises.most_common(5):
+    print(f'{elem[0]:<20}{elem[1]:>20}')
 
-for elem in cantidades:
-    if elem not in sin_repetir and elem[0] != '' and len(sin_repetir) < 5:
-        sin_repetir.append(elem)
-print('-'*30)
-print(f'{"Pais":<20}{"Peliculas":>10}')
-print('-'*30)
-for elem in sin_repetir:
-    print(f'{elem[0]:<20}{elem[1]:>10}')
-
-print('-'*30)
+print('-'*40)
 archivo.close()
 archivo_nuevo.close()
