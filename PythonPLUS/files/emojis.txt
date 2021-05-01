@@ -1,0 +1,15 @@
+{
+    "\ud83d\ude00": "grinning face",
+    "\ud83d\ude03": "grinning face with big eyes",
+    "\ud83d\ude04": "grinning face with smiling eyes",
+    "\ud83d\ude01": "beaming face with smiling eyes",
+    "\ud83d\ude06": "grinning squinting face",
+    "\ud83d\ude05": "grinning face with sweat",
+    "\ud83e\udd23": "rolling on the floor laughing",
+    "\ud83d\ude02": "face with tears of joy",
+    "\ud83d\ude42": "slightly smiling face",
+    "\ud83d\ude43": "upside-down face",
+    "\ud83d\ude09": "winking face",
+    "\ud83d\ude0a": "smiling face with smiling eyes",
+    "\ud83d\ude07": "smiling face with halo"
+}
