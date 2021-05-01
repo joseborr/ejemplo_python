@@ -23,7 +23,6 @@ def crear_json(path,archivo,dic):
     json.dump(dic,archivo_json,indent=4)
     archivo_json.close()
 
-
 def continente(cadena):
     '''devuelve boolean si la cadena ingresada es continente'''
     continentes = ['Africa','Americas','Asia','Europe','Oceania']
